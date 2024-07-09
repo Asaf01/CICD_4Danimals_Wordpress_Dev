@@ -29,5 +29,5 @@ RUN ln -sf /dev/stdout /var/log/apache2/access.log \
     && ln -sf /dev/stderr /var/log/apache2/error.log
 
 EXPOSE 80
-EXPOSE 68
+EXPOSE 69
 ENTRYPOINT ["/entrypoint.sh"]
