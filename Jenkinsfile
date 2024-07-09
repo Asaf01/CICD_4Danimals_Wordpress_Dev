@@ -43,12 +43,16 @@ pipeline {
         }
 
         stage('Test Docker Image') {
-            steps {
-                script {
-                    sh 'echo "Testing the Docker image..."'
-                }
-            }
-        }
+    steps {
+        script {
+            sh 'echo "Testing the Docker image..."'
+            sh 'docker run -d --name wordpress ${DOCKERHUB_REPO}:${VERSION}'
+            sh 'docker stop wordpress'
+              }
+           }
+       }
+        
+
 
         stage('Push Docker Image') {
             steps {
