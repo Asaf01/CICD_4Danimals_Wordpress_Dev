@@ -7,8 +7,7 @@ pipeline {
         DOCKERFILE_DIR = 'docker_ci'
         DOCKERHUB_CREDENTIALS = 'dockerhublogin'  
         DOCKERHUB_REPO = 'bendrorasaf/wordpress'
-        K8S_REPO_URL = 'https://github.com/Asaf01/WP_PROJECT'
-        K8S_FILES_DIR = 'WP_PROJECT/K8S Deployment'
+
     }
 
     stages {
@@ -48,6 +47,7 @@ pipeline {
             sh 'echo "Testing the Docker image..."'
             sh 'docker run -d --name wordpress ${DOCKERHUB_REPO}:${VERSION}'
             sh 'docker stop wordpress'
+            sh 'echo "Testing stage done !!!!"'
               }
            }
        }
