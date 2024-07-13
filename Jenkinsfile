@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'https://github.com/Asaf01/CICD_4Danimals_Wordpress'
+        REPO_URL = 'https://github.com/Asaf01/CICD_4Danimals_Wordpress_Dev'
         IMAGE_NAME = 'wordpress'
         DOCKERFILE_DIR = 'docker_ci'
         DOCKERHUB_CREDENTIALS = 'dockerhublogin'  
